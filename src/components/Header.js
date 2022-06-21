@@ -1,5 +1,4 @@
 import React from 'react';
-import CardComponent from './CardComponent';
 import { Navbar, Nav } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -12,7 +11,7 @@ const Header = () => {
         <Container>
           <Navbar.Brand href='#'>Cocktails</Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
-          <Navbar.Collapse>
+          <Navbar.Collapse className=''>
             <Nav className='me-auto'>
               <Nav.Link href='#home'>Home</Nav.Link>
               <Nav.Link href='#link'>Link</Nav.Link>
