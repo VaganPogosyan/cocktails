@@ -8,17 +8,18 @@ import { Container } from 'react-bootstrap';
 const Header = () => {
   return (
     <>
-      <Navbar expand='lg'>
+      <Navbar bg='dark' variant='dark' expand='sm' sticky='top'>
         <Container>
-          <Navbar.Brand href='#'>React-Bootstrap</Navbar.Brand>
+          <Navbar.Brand href='#'>Cocktails</Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse>
-            <Nav.Link href='#home'>Home</Nav.Link>
-            <Nav.Link href='#link'>Link</Nav.Link>
+            <Nav className='me-auto'>
+              <Nav.Link href='#home'>Home</Nav.Link>
+              <Nav.Link href='#link'>Link</Nav.Link>
+            </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <CardComponent></CardComponent>
     </>
   );
 };
