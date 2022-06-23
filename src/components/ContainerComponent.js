@@ -28,7 +28,7 @@ const posts = [
   {
     url: 'https://images.unsplash.com/photo-1655803395812-ee6271463c9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80',
     title: 'Car',
-    text: 'A picture of a car',
+    text: 'A picture of a carA picture of a carA picture of a carA picture of a carA picture of a carA picture of a carA picture of a carA picture of a carA picture of a carA picture of a carA picture of a carA picture of a car',
     link: 'https://images.unsplash.com/photo-1655803395812-ee6271463c9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80',
   },
   {
@@ -41,11 +41,11 @@ const posts = [
 
 const ContainerComponent = () => {
   return (
-    <Container>
-      <div className='row row-cols-lg-4 justify-content'>
+    <Container className='container'>
+      <div className='row'>
         {posts.map((post) => {
           return (
-            <div className='col '>
+            <div className='col'>
               <CardComponent post={post} key={posts.url} />
             </div>
           );
