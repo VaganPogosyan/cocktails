@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import '../css/CardComponent.css';
 
-let x = false;
+// function handleTextClick() {
+//   setTextHidden(!textHidden);
+// }
 
 const CardComponent = ({ post }) => {
+  const [textHidden, setTextHidden] = useState(true);
+
+  const more = '...more';
+
+  function handleTextClick() {
+    setTextHidden(!textHidden);
+    console.log(textHidden);
+  }
+
   return (
     <>
       <Card className='mt-3' style={{ width: '18rem' }}>
@@ -16,12 +27,14 @@ const CardComponent = ({ post }) => {
         />
         <Card.Body>
           <Card.Title className=''>{post.title}</Card.Title>
-          {x ? 'string True' : 'string False'}
-          {
-            if ()
-          }
-          <Card.Text style={{ height: '3rem', overflow: 'hidden' }}>
-            {post.text}
+          <Card.Text
+            onClick={() => handleTextClick()}
+            style={textHidden ? { height: '3rem', overflow: 'hidden' } : null}
+          >
+            {post.text}{' '}
+            <span className='text-secondary' style={{ cursor: 'pointer' }}>
+              {more}
+            </span>
           </Card.Text>
           <Button href={post.link} variant='primary' target='_blank'>
             Go to image
