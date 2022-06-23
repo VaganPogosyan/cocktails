@@ -3,15 +3,29 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import '../css/CardComponent.css';
 
-const CardComponent = (props) => {
+let x = false;
+
+const CardComponent = ({ post }) => {
   return (
     <>
-      <Card className='mb-5' style={{ width: '18rem' }}>
-        <Card.Img variant='top' src={props.url} className='ripple' />
+      <Card className='mt-3' style={{ width: '18rem' }}>
+        <Card.Img
+          variant='top'
+          src={post.url}
+          style={{ height: '18rem', objectFit: 'cover' }}
+        />
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>Some quick example text to build on the card</Card.Text>
-          <Button variant='primary'>Go somewhere</Button>
+          <Card.Title className=''>{post.title}</Card.Title>
+          {x ? 'string True' : 'string False'}
+          {
+            if ()
+          }
+          <Card.Text style={{ height: '3rem', overflow: 'hidden' }}>
+            {post.text}
+          </Card.Text>
+          <Button href={post.link} variant='primary' target='_blank'>
+            Go to image
+          </Button>
         </Card.Body>
       </Card>
     </>
