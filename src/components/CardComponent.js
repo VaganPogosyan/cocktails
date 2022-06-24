@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import '../css/CardComponent.css';
-import { notDeepStrictEqual } from 'assert';
 
 // function handleTextClick() {
 //   setTextHidden(!textHidden);
@@ -16,7 +15,6 @@ const CardComponent = ({ post }) => {
 
   function handleTextClick() {
     setTextHidden(!textHidden);
-    console.log(textHidden);
   }
 
   const shortText = post.text.slice(0, 30);

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { FaGlassMartiniAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
@@ -15,14 +16,14 @@ const Header = () => {
             color='white'
             fontSize={'1.1rem'}
           />
-          <Navbar.Brand href='#'>Cocktails</Navbar.Brand>
+          <Navbar.Brand href='home'>Cocktails</Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse>
             <Nav className='ms-auto'>
-              <Nav.Link className='me' href='#home'>
+              <Nav.Link className='me' href='home'>
                 Home
               </Nav.Link>
-              <Nav.Link className='me' href='#link'>
+              <Nav.Link className='me' href='link'>
                 Link
               </Nav.Link>
             </Nav>
