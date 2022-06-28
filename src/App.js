@@ -1,8 +1,9 @@
 import React from 'react';
 import Header from './components/Header';
 import ContainerComponent from './components/ContainerComponent';
-import { LinkComponent } from './components/LinkComponent';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+// import { LinkComponent } from './components/LinkComponent';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { SearchBar } from './components/SearchBar';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <Router>
         <Routes>
           <Route path='/home' element={<ContainerComponent />}></Route>
-          <Route path='/link' element={<LinkComponent />}></Route>
+          <Route path='/search' element={<SearchBar />}></Route>
         </Routes>
       </Router>
       {/* <ContainerComponent /> */}

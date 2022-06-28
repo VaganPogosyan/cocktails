@@ -1,7 +1,6 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { FaGlassMartiniAlt } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
@@ -23,8 +22,8 @@ const Header = () => {
               <Nav.Link className='me' href='home'>
                 Home
               </Nav.Link>
-              <Nav.Link className='me' href='link'>
-                Link
+              <Nav.Link className='me' href='search'>
+                Search
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
